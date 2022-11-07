@@ -43,5 +43,28 @@ Una vez teniendo los datos limpios, pasé todas las tablas al entorno de SQL.
 Todas las relaciones se basaron en columnas que tenían en común todas las tablas.
 
 
+QUERIES
 
+Por último, hice 10 queries sacando varios datos de interés de la base de datos. Estas son algunas de ellas:
+
+<img width="201" alt="Captura de Pantalla 2022-11-07 a las 21 37 26" src="https://user-images.githubusercontent.com/115650089/200410306-29f5f3cb-7950-41cb-a891-f3fe35ca613f.png">
+
+ACTORES CON MÁS PELÍCULAS HECHAS
+
+<img width="609" alt="Captura de Pantalla 2022-11-07 a las 22 07 22" src="https://user-images.githubusercontent.com/115650089/200415571-54199783-faa2-4603-b911-e29ae2884249.png">
+<img width="208" alt="Captura de Pantalla 2022-11-07 a las 22 09 15" src="https://user-images.githubusercontent.com/115650089/200415903-070c95c1-b871-4b3c-bc03-5e961042d950.png">
+
+PELÍCULAS QUE DURAN MÁS DE 100 MINUTOS -> 'LONG FILM' / PELÍCULAS QUE DURAN MENOS DE 100 MINUTOS -> 'SHORT FILM' 
+
+<img width="100" alt="Captura de Pantalla 2022-11-07 a las 22 09 38" src="https://user-images.githubusercontent.com/115650089/200415961-a64d6086-e2dd-4753-8e5b-c77ee2f2526e.png">
+
+610 son 'LONG FILM'
+
+<img width="183" alt="Captura de Pantalla 2022-11-07 a las 22 10 49" src="https://user-images.githubusercontent.com/115650089/200416170-74de05f1-ee44-47c0-a615-5020a30863fc.png">
+
+TOP 3 CLIENTES
+
+<img width="175" alt="Captura de Pantalla 2022-11-07 a las 22 12 09" src="https://user-images.githubusercontent.com/115650089/200416427-6a414602-8792-4487-bb77-7cd35bf978b0.png">
+
+NÚMERO DE PELÍCULAS POR GÉNERO
 
