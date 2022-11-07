@@ -29,10 +29,11 @@ DROP first_name
 
 SELECT * FROM actor;
 
--- borro la columna de release_year porque es toda '2006'
+-- Borro la columna de release_year porque es toda '2006'
 ALTER TABLE film
 DROP COLUMN release_year;
 
+-- Películas con escenas eliminadas y para todos los públicos
 SELECT title, `deleted scenes`
 FROM film
 WHERE `deleted scenes` = 'Y' AND rating = 'G'
@@ -53,6 +54,8 @@ ON a.actor_id = od.actor_id
 LEFT JOIN film f
 ON f.film_id = od.film_id
 GROUP BY full_name
+ORDER BY titles DESC
+LIMIT 5
 ;
 
 -- Categoría de todas las películas
@@ -65,12 +68,21 @@ ON od.film_id = f.film_id
 ;
 
 -- Si una película dura más de 100 mins, es larga, si dura menos, es corta
+CREATE TEMPORARY TABLE TEMP1
 SELECT length,
 	CASE WHEN length > 100 THEN 'LONG FILM'
 	ELSE 'SHORT FILM' 
     END AS 'movie_duration'
-	FROM film;
-    
+	FROM film
+ORDER BY length DESC
+;
+SELECT * FROM TEMP1;
+
+-- Cuantas películas son LONG / SHORT
+SELECT count(movie_duration) duration
+FROM TEMP1 t
+WHERE movie_duration = 'LONG FILM';
+
 -- 1-Top 3 clientes 
 SELECT customer_id, count(f.title) titles
 FROM film f
@@ -110,5 +122,6 @@ ON c.category_id = od.category_id
 INNER JOIN film f
 ON f.film_id = od.film_id
 GROUP BY c.category_id
+ORDER BY titles DESC
 ;
 
