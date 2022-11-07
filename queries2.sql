@@ -71,13 +71,44 @@ SELECT length,
     END AS 'movie_duration'
 	FROM film;
     
--- 1-Top 3 clientes, después de ordenar el numero de peliculas que ha alquilado agrupado por id_cliente
-SELECT customer_id, count(f.title)
+-- 1-Top 3 clientes 
+SELECT customer_id, count(f.title) titles
 FROM film f
 INNER JOIN inventory i
-ON f.inventory_id = i.inventory_id
+ON f.film_id = i.film_id
 INNER JOIN rental r
 ON i.inventory_id = r.inventory_id
-GROUP BY customer_id
+GROUP BY customer_id  
+ORDER BY count(f.title) DESC
+LIMIT 3
+;
+
+-- Películas con el replacement_cost más alto
+SELECT f.replacement_cost, f.title 
+FROM film f
+ORDER BY f.replacement_cost DESC
+LIMIT 5
+;
+
+-- Los empleados que más películas han alquilado
+SELECT r.staff_id, count(f.film_id) films
+FROM rental r
+INNER JOIN inventory i
+ON r.inventory_id = i.inventory_id
+INNER JOIN film f
+ON i.film_id = f.film_id
+GROUP BY staff_id
+ORDER BY count(film_id) DESC
+LIMIT 5
+;
+
+-- Número de películas por género
+SELECT name, count(title) titles
+FROM category c
+INNER JOIN old_HDD od
+ON c.category_id = od.category_id
+INNER JOIN film f
+ON f.film_id = od.film_id
+GROUP BY c.category_id
 ;
 
