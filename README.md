@@ -14,7 +14,7 @@ Antes de llevar las tablas al entorno de trabajo de SQL, hubo que limpiarlo, sig
 
 2. Una vez visto todas las tablas, decidí borrar la columna "last_update" de todas ellas, ya que ésta no aportaba ninguna información relevante. 
 
-3. En la tabla "film", borré la columna "original_language_id", porque consideré que a la hora de alquilar una película, lo importante es saber en qué idiomas está disponible, más allá del idioma original de la misma. Además, podía dar pie a confusión, ya que los id del idioma original y los de los idiomas en los que estaba disponible eran los mismos.
+3. En la tabla "film", borré la columna "original_language_id", ya que tenía solo valores nulos.
 
 4. Por último, también en la tabla "film", estaba la columna "special_features". En la misma, podíamos ver que cada registro decía si la película en cuestión tenía comentarios, trailers, escenas eliminadas o entre bastidores. Bajo mi punto de vista, el problema con esta columna era que los datos se daban a la vez, es decir, sin ninguna diferenciación entre ellos, por lo que decidí crear 4 columnas (cada una con uno de los elementos que he nombrado) y, en caso de que la película tenga alguno de ellos, se vería "Y" o "N" en caso contrario. Esto facilitaría la búsqueda de películas con cualquiera de estos requerimientos.
 
