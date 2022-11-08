@@ -2,7 +2,7 @@
 
 El segundo proyecto, tenía como objetivo limpiar y crear una base de datos de un videoclub en SQL. Los pasos que se han seguido son los siguientes:
 
-LIMPIEZA DE DATOS
+LIMPIEZA DE DATOS 🧹
 
 En un principio, se nos facilitó una base de datos que consta de 7 tablas:
 
@@ -20,7 +20,7 @@ Antes de llevar las tablas al entorno de trabajo de SQL, hubo que limpiarlo, sig
 
 <img width="809" alt="Captura de Pantalla 2022-11-07 a las 17 57 27" src="https://user-images.githubusercontent.com/115650089/200369228-b40ca927-60eb-47f1-a0b7-08e482ec6994.png">
 
-RELACIÓN ENTRE TABLAS DE LA BASE DE DATOS
+RELACIÓN ENTRE TABLAS DE LA BASE DE DATOS 📊
 
 Una vez teniendo los datos limpios, pasé todas las tablas al entorno de SQL. 
 
@@ -43,7 +43,7 @@ Una vez teniendo los datos limpios, pasé todas las tablas al entorno de SQL.
 Todas las relaciones se basaron en columnas que tenían en común todas las tablas.
 
 
-QUERIES
+QUERIES  💻
 
 Por último, hice 10 queries sacando varios datos de interés de la base de datos. Estas son algunas de ellas:
 
